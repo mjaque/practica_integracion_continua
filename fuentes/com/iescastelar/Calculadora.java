@@ -38,7 +38,7 @@ public class Calculadora {
      * @param b el segundo sumando
      * @return  la suma de {@code a} y {@code b}
      */
-    public int sumar(int a, int b) {
+    public Integer sumar(Integer a, Integer b) {
         return a + b;
     }
 
@@ -51,7 +51,7 @@ public class Calculadora {
      * @param b el sustraendo
      * @return  el resultado de restar {@code b} a {@code a}
      */
-    public int restar(int a, int b) {
+    public Integer restar(Integer a, Integer b) {
         return a + b; // ERROR INTENCIONADO: debería ser a - b
     }
 
@@ -65,7 +65,7 @@ public class Calculadora {
      * @return       {@code true} si {@code numero} es par;
      *               {@code false} en caso contrario
      */
-    public boolean esPar(int numero) {
+    public Boolean esPar(Integer numero) {
         return numero % 2 != 0; // ERROR INTENCIONADO: debería ser == 0
     }
 
@@ -87,9 +87,9 @@ public class Calculadora {
      * @return  una cadena con los dígitos {@code 0} a {@code n - 1} concatenados
      * @see     java.lang.StringBuilder
      */
-    public String concatenarNumeros(int n) {
+    public String concatenarNumeros(Integer n) {
         String resultado = "";
-        for (int i = 0; i < n; i++) {
+        for (Integer i = 0; i < n; i++) {
             resultado = resultado + i; // SpotBugs detectará SBSC
         }
         return resultado;

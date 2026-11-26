@@ -1,0 +1,19 @@
+name: Flujo de Práctica de IC.
+
+on: push
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configurar JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+
+      - name: Compilar con javac
+        run: |
+          mkdir compilados
+          javac -d compilados fuentes/com/iescastelar/*.java
